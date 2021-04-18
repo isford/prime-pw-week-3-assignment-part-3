@@ -27,14 +27,14 @@ console.log('5. Adding 25 to supplyChanges.', supplyChanges.push(25));
 //    - if the value is 0, skip it. Do not log it to the console.
 //    - if the value is negative, format the log as 'Part count -x.'
 console.log('6. Showing supplyChanges...');
-for ( x = 0; x < supplyChanges.length; x++){
+for (let x = 0; x < supplyChanges.length + 1; x++){
   if (supplyChanges[x] > 0) {
-    console.log('Added '+ x + ' parts.');
+    console.log('Added '+ supplyChanges[x] + ' parts.');
   }
-  if (supplyChanges[x] < 0) {
-    console.log('Part count -' + x);
+  else if (supplyChanges[x] < 0) {
+    console.log('Part count ' + supplyChanges[x]);
   }
-  if (supplyChanges[x]=0) {
+  else {
     console.log('No change');
   }
 }
